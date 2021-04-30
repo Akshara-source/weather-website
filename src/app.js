@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const geocode = require('./utils/geocode');
 const forcast = require('./utils/forcast');
+const port = process.env.PORT || 3000;
 
 
 
@@ -92,7 +93,7 @@ app.get('/*',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
-    console.log("listen to 3000");
+app.listen(port,()=>{
+    console.log("listen to "+port);
 
 });
